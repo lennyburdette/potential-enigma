@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B88ED1322A0A99C100C56F24 /* Countries in Frameworks */ = {isa = PBXBuildFile; productRef = B88ED1312A0A99C100C56F24 /* Countries */; };
+		B88ED1342A0A99C400C56F24 /* SpaceX in Frameworks */ = {isa = PBXBuildFile; productRef = B88ED1332A0A99C400C56F24 /* SpaceX */; };
 		B8B34BE42A0A8E4E0092D763 /* TwoClientAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B34BE32A0A8E4E0092D763 /* TwoClientAppApp.swift */; };
 		B8B34BE62A0A8E4E0092D763 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B34BE52A0A8E4E0092D763 /* ContentView.swift */; };
 		B8B34BE82A0A8E500092D763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B34BE72A0A8E500092D763 /* Assets.xcassets */; };
 		B8B34BEC2A0A8E500092D763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B34BEB2A0A8E500092D763 /* Preview Assets.xcassets */; };
+		B8B34C012A0A90D10092D763 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = B8B34C002A0A90D10092D763 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B88ADA432A0A98DC005552C0 /* Countries */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Countries; path = TwoClientApp/Countries; sourceTree = "<group>"; };
+		B88ADA442A0A98E8005552C0 /* SpaceX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpaceX; path = TwoClientApp/SpaceX; sourceTree = "<group>"; };
 		B8B34BE02A0A8E4E0092D763 /* TwoClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B34BE32A0A8E4E0092D763 /* TwoClientAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoClientAppApp.swift; sourceTree = "<group>"; };
 		B8B34BE52A0A8E4E0092D763 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,17 +32,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88ED1342A0A99C400C56F24 /* SpaceX in Frameworks */,
+				B8B34C012A0A90D10092D763 /* Apollo in Frameworks */,
+				B88ED1322A0A99C100C56F24 /* Countries in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B88ADA422A0A98DC005552C0 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B88ADA432A0A98DC005552C0 /* Countries */,
+				B88ADA442A0A98E8005552C0 /* SpaceX */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B88ED1302A0A99C100C56F24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8B34BD72A0A8E4E0092D763 = {
 			isa = PBXGroup;
 			children = (
+				B88ADA422A0A98DC005552C0 /* Packages */,
 				B8B34BE22A0A8E4E0092D763 /* TwoClientApp */,
 				B8B34BE12A0A8E4E0092D763 /* Products */,
+				B88ED1302A0A99C100C56F24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +111,11 @@
 			dependencies = (
 			);
 			name = TwoClientApp;
+			packageProductDependencies = (
+				B8B34C002A0A90D10092D763 /* Apollo */,
+				B88ED1312A0A99C100C56F24 /* Countries */,
+				B88ED1332A0A99C400C56F24 /* SpaceX */,
+			);
 			productName = TwoClientApp;
 			productReference = B8B34BE02A0A8E4E0092D763 /* TwoClientApp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +144,9 @@
 				Base,
 			);
 			mainGroup = B8B34BD72A0A8E4E0092D763;
+			packageReferences = (
+				B8B34BFF2A0A90D10092D763 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = B8B34BE12A0A8E4E0092D763 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +384,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8B34BFF2A0A90D10092D763 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B88ED1312A0A99C100C56F24 /* Countries */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Countries;
+		};
+		B88ED1332A0A99C400C56F24 /* SpaceX */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceX;
+		};
+		B8B34C002A0A90D10092D763 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8B34BFF2A0A90D10092D763 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8B34BD82A0A8E4E0092D763 /* Project object */;
 }
